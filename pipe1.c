@@ -4,12 +4,12 @@
 #include <sys/wait.h>
 
 int main(){
-   
+    
     int size_pipe[2];//size_pipe[0],size_pipe[1]
     int arr_pipe[2];
     pipe(size_pipe);
     pipe(arr_pipe);
-    int pid = fork();
+    pid_t pid = fork();
     if(pid ==0){//child process
 
         close(size_pipe[1]);
