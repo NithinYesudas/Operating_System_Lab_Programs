@@ -36,7 +36,8 @@ int main(){
     
     for (int i = 0; i < n;i++){
         if(processes[i].arrivalTime>timer){
-            timer = processes[i].arrivalTime;
+            timer = processes[i].arrivalTime+processes[i].burstTime;
+
         }else{
             timer += processes[i].burstTime;
         }
